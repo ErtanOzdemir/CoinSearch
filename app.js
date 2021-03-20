@@ -8,7 +8,7 @@
              enteredAcronymNameOfCoin: null,
              acronymOfCoin: null,
 
-             adressAt: {
+             adressOn: {
                  facebook: null,
                  reddit: null,
                  twitter: null,
@@ -29,10 +29,10 @@
                      this.nameOfCoin = data[0].name;
                      this.acronymOfCoin = data[0].id;
 
-                     this.adressAt.reddit = data[0].reddit_url;
-                     this.adressAt.facebook = data[0].facebook_url;
-                     this.adressAt.medium = data[0].medium_url;
-                     this.adressAt.twitter = data[0].twitter_url;
+                     this.adressOn.reddit = data[0].reddit_url;
+                     this.adressOn.facebook = data[0].facebook_url;
+                     this.adressOn.medium = data[0].medium_url;
+                     this.adressOn.twitter = data[0].twitter_url;
 
                  }).catch(() => alert("We couldn't find the money you were looking for."))
          },
