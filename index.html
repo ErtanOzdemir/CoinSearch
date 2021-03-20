@@ -16,7 +16,7 @@
 
 <body>
     <div id="app">
-        <title>Coin Search - {{name}}</title>
+        <title>Coin Search - {{nameOfCoin}}</title>
 
         <center>
             <p style="display: inline; color: white; font-family: 'Monoton', cursive; font-size: 5vw; margin-bottom: 1%;">C<span><img src="assets/coin.png" alt="coinInfo" style="width: 3.8%; padding-top: 6%;"></span>in Search</p>
@@ -24,27 +24,27 @@
 
             <div></div>
 
-            <input style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" type="text" v-model="searchName" placeholder="Enter a coin name (XRP, BNB etc.)" v-on:keyup.enter="searchCoin">
+            <input style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" type="text" v-model="enteredAcronymNameOfCoin" placeholder="Enter a coin name (XRP, BNB etc.)" v-on:keyup.enter="searchCoin">
 
 
-            <div id="informations" v-if="info!=null">
-                <div id="logo"><img id="logoOfCoin" v-bind:src="logo" v-bind:alt="name"></div>
-                <h1 class="coinInfo">{{name}} - {{id}}</h1>
+            <div id="informations" v-if="descriptionOfCoin!=null">
+                <div id="logo"><img id="logoOfCoin" v-bind:src="logoOfCoin" v-bind:alt="nameOfCoin"></div>
+                <h1 class="coinInfo">{{nameOfCoin}} - {{acronymOfCoin}}</h1>
 
-                <a v-if="facebookAdress != ''" v-bind:href="facebookAdress" target="_blank" rel="facebookIcon"><img src="assets/facebook.png" class="icons" alt="facebook"></a>
-                <a v-if="redditAdress != ''" v-bind:href="redditAdress" target="_blank" rel="redditIcon"><img src="assets/reddit-logo-16.png" class="icons" alt="reddit"></a>
-                <a v-if="twitterAdress != ''" v-bind:href="twitterAdress" target="_blank" rel="twitterIcon"> <img src="assets/twitter.png" class="icons" alt="twitter"></a>
-                <a v-if="mediumAdress != ''" v-bind:href="mediumAdress" target="_blank" rel="mediumIcon"><img src="assets/medium.png" class="icons" alt="medium"></a>
+                <a v-if="adressAt.facebook != ''" v-bind:href="adressAt.facebook" target="_blank" rel="facebookIcon"><img src="assets/facebook.png" class="icons" alt="facebook"></a>
+                <a v-if="adressAt.reddit != ''" v-bind:href="redditAdress" target="_blank" rel="redditIcon"><img src="assets/reddit-logo-16.png" class="icons" alt="reddit"></a>
+                <a v-if="adressAt.twitter != ''" v-bind:href="adressAt.twitter" target="_blank" rel="twitterIcon"> <img src="assets/twitter.png" class="icons" alt="twitter"></a>
+                <a v-if="adressAt.medium != ''" v-bind:href="adressAt.medium" target="_blank" rel="mediumIcon"><img src="assets/medium.png" class="icons" alt="medium"></a>
 
 
 
 
                 <hr style="padding-left: 5%;">
-                <p class="coinInfo">{{info}}</p>
+                <p class="coinInfo">{{descriptionOfCoin}}</p>
 
             </div>
 
-            <p v-if="info==null" style="margin-top: 5%; color: white;font-size: 1.8vw; font-style: italic;">"Thanks to Coin Info, you can get informations about coins and tokens." </p>
+            <p v-if="descriptionOfCoin==null" style="margin-top: 5%; color: white;font-size: 1.8vw; font-style: italic;">"Thanks to Coin Info, you can get informations about coins and tokens." </p>
 
         </center>
 
