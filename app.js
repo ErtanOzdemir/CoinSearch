@@ -14,8 +14,6 @@
                  twitter: null,
                  medium: null,
              }
-
-
          }
      },
      methods: {
@@ -23,7 +21,7 @@
              fetch("https://api.nomics.com/v1/currencies?key=74420a7d3bc34353bcd21da30533efe8&ids=" + this.enteredAcronymNameOfCoin.toUpperCase())
                  .then(response => response.json())
                  .then(data => {
-                     console.log(data);
+
                      this.descriptionOfCoin = data[0].description;
                      this.logoOfCoin = data[0].logo_url;
                      this.nameOfCoin = data[0].name;
@@ -34,7 +32,7 @@
                      this.adressOn.medium = data[0].medium_url;
                      this.adressOn.twitter = data[0].twitter_url;
 
-                 }).catch(() => alert("We couldn't find the money you were looking for."))
+                 }).catch(() => alert("We couldn't find the coin you were looking for."))
          },
 
      },
