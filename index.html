@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Comfortaa:wght@600&family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="search.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,11 +16,11 @@
 
 <body>
     <div id="app">
-        <title>CoinInfo - {{name}}</title>
+        <title>Coin Search - {{name}}</title>
 
         <center>
-            <p style="display: inline; color: white; font-family: 'Monoton', cursive; font-size: 5vw; margin-bottom: 1%;">Coin Inf</p>
-            <img src="assets/coin.png" alt="coinInfo" style="width: 3.8%; padding-top: 6%;">
+            <p style="display: inline; color: white; font-family: 'Monoton', cursive; font-size: 5vw; margin-bottom: 1%;">C<span><img src="assets/coin.png" alt="coinInfo" style="width: 3.8%; padding-top: 6%;"></span>in Search</p>
+
 
             <div></div>
 
@@ -32,11 +31,10 @@
                 <div id="logo"><img id="logoOfCoin" v-bind:src="logo" v-bind:alt="name"></div>
                 <h1 class="coinInfo">{{name}} - {{id}}</h1>
 
-
-                <a v-if="facebookAdress != ''" v-bind:href="facebookAdress" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.png" class="icons" alt="facebook"></a>
-                <a v-if="redditAdress != ''" v-bind:href="redditAdress" target="_blank" rel="noopener noreferrer"><img src="assets/reddit-logo-16.png" class="icons" alt="reddit"></a>
-                <a v-if="twitterAdress != ''" v-bind:href="twitterAdress" target="_blank" rel="noopener noreferrer"> <img src="assets/twitter.png" class="icons" alt="twitter"></a>
-                <a v-if="mediumAdress != ''" v-bind:href="mediumAdress" target="_blank" rel="noopener noreferrer"><img src="assets/medium.png" class="icons" alt="medium"></a>
+                <a v-if="facebookAdress != ''" v-bind:href="facebookAdress" target="_blank" rel="facebookIcon"><img src="assets/facebook.png" class="icons" alt="facebook"></a>
+                <a v-if="redditAdress != ''" v-bind:href="redditAdress" target="_blank" rel="redditIcon"><img src="assets/reddit-logo-16.png" class="icons" alt="reddit"></a>
+                <a v-if="twitterAdress != ''" v-bind:href="twitterAdress" target="_blank" rel="twitterIcon"> <img src="assets/twitter.png" class="icons" alt="twitter"></a>
+                <a v-if="mediumAdress != ''" v-bind:href="mediumAdress" target="_blank" rel="mediumIcon"><img src="assets/medium.png" class="icons" alt="medium"></a>
 
 
 
