@@ -9,15 +9,16 @@ If you are a crypto currency trader you may need to explore coin or tokens which
 
 1. Just download this repo to your computer and click the **index.html** file.
 
-![Preview 1] (https://github.com/ErtanOzdemir/CoinSearch/tree/master/assets/previews/preview1.png)
+![Preview 1](https://github.com/ErtanOzdemir/CoinSearch/blob/master/assets/previews/preview1.png)
 
 
 2. Enter a **acronym** of any coin to input area and press enter.
 
-![Preview 2] (https://github.com/ErtanOzdemir/CoinSearch/tree/master/assets/previews/preview2.png)
+![Preview 2](https://github.com/ErtanOzdemir/CoinSearch/blob/master/assets/previews/preview2.png)
 
 
 3. Coin search application get informations about coin such as social media adresses and descriptions.
 
-![Preview 3] (https://github.com/ErtanOzdemir/CoinSearch/tree/master/assets/previews/preview3.png)
+![Preview 3](https://github.com/ErtanOzdemir/CoinSearch/blob/master/assets/previews/preview3.png)
+
 
